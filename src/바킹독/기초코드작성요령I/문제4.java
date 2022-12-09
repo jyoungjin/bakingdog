@@ -8,19 +8,17 @@ package 바킹독.기초코드작성요령I;
 
 public class 문제4 {
 
-    // 시간복잡도 O(root N)
+    // 시간복잡도 O(lgN)
     public int solution(int n) {
-
-        for (int i = 1; i * i < n; i++) {
-            if (i * i == n) {
-                return 1;
-            }
+        int i = 1;
+        while (2 * i < n) {
+            i *= 2;
         }
-        return 0;
+        return i;
     }
 
     public static void main(String[] args) {
         문제4 문제 = new 문제4();
-        System.out.println(문제.solution(5));
+        System.out.println(문제.solution(97615282));
     }
 }
