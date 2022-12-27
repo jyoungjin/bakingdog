@@ -1,4 +1,4 @@
-package 바킹독.기초코드작성요령I;
+package 바킹독.기초코드작성요령I.problem;
 
 /**
  * 문제 3

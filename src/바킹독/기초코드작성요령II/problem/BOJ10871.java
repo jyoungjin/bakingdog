@@ -1,4 +1,4 @@
-package 바킹독.기초코드작성요령II;
+package 바킹독.기초코드작성요령II.problem;
 
 import java.io.BufferedReader;
 import java.io.IOException;
