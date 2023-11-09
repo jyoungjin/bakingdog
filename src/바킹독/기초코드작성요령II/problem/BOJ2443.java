@@ -1,23 +1,22 @@
 package 바킹독.기초코드작성요령II.problem;
 
 import java.io.*;
-import java.util.StringTokenizer;
 
 /**
- * 빠른 A+B
+ * 별 찍기 - 6
  */
-public class BOJ15552 {
+public class BOJ2443 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int n = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < n; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
-            bw.write((a + b) + "\n");
+        for (int i = n-1; i >= 0; i--) {
+            for (int j = 2 * n - 1; j > 0; j--) {
+                bw.write(Math.abs(j - n) <= i ? "*" : j - n > 0 ? " " : "");
+            }
+            bw.write("\n");
         }
 
         bw.flush();
