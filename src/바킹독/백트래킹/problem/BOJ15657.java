@@ -4,15 +4,14 @@ import java.io.*;
 import java.util.Arrays;
 
 /**
- * [실버 3] N과 M (5) : https://www.acmicpc.net/problem/15654
+ * [실버 3] N과 M (8) : https://www.acmicpc.net/problem/15657
  */
-public class BOJ15654 {
+public class BOJ15657 {
 
     static int n;
     static int m;
     static int[] arr;
     static int[] res = new int[10];
-    static boolean[] visited = new boolean[10];
     static BufferedWriter bw;
 
     public static void main(String[] args) throws IOException {
@@ -47,12 +46,12 @@ public class BOJ15654 {
             return;
         }
         for (int i = 0; i < n; i++) {
-            if (!visited[i]) {
-                visited[i] = true;
-                res[k] = arr[i];
-                recur(k + 1);
-                visited[i] = false;
+            if (k != 0 && res[k - 1] > arr[i]) {
+                continue;
             }
+
+            res[k] = arr[i];
+            recur(k + 1);
         }
     }
 }

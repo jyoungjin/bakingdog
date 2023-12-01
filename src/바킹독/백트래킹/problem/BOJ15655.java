@@ -4,9 +4,9 @@ import java.io.*;
 import java.util.Arrays;
 
 /**
- * [실버 3] N과 M (5) : https://www.acmicpc.net/problem/15654
+ * [실버 3] N과 M (6) : https://www.acmicpc.net/problem/15655
  */
-public class BOJ15654 {
+public class BOJ15655 {
 
     static int n;
     static int m;
@@ -47,6 +47,10 @@ public class BOJ15654 {
             return;
         }
         for (int i = 0; i < n; i++) {
+            if (k != 0 && res[k - 1] >= arr[i]) {
+                continue;
+            }
+
             if (!visited[i]) {
                 visited[i] = true;
                 res[k] = arr[i];
